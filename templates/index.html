@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!--    attempted to learn bootstrap still need to learn more but it makes styling somewhat easier -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+    <title>Dojo Survey</title>
+</head>
+<body>
+<!--     all styling is done using bootsrap and will be shwon next to  class names -->
+    <div class="wrapper bg-dark m-5">
+        <h1 class="text-light">Dojo Survey</h1>
+        <h3 class="text-light">Create a User</h3>
+
+        <form action='/result' method='post'>
+            <div class="form-group">
+                <label class="text-light" for="name">Name:</label>
+                <input class="form-control" type='text' name='name'>
+            </div>
+            <div class="form-group">
+                <label class="text-light" for="location">Location:</label>
+                <select class="form-control" name="location" id="location">
+                    <option value="San Jose">San Jose</option>
+                    <option value="Oakland">Oakland</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="text-light" for="language">Favorite Language:</label>
+                <select class="form-control" name="language" id="language">
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h3 class="text-light">Gender:</h3>
+                <input class="text-light" type="radio" name="gender" value="Male">
+                <label class="text-light" for="gender">Male</label>
+                <input class="text-light" type="radio" name="gender" value="Female">
+                <label class="text-light" for="gender">Female</label>
+                
+
+            </div>
+
+            <div class="form-group">
+                <h3 class="text-light">Newsletter:</h3>
+                <label class="text-light" for="newsletter">Subscribe to Newsletter? </label>
+                <input type="checkbox" name="newsletter" checked>
+            </div>
+
+
+            <div class="form-group">
+                <label class="text-light" for="comment">Comment (Optional):</label>
+                <textarea class="form-control" name="comment" id="comment" cols="30" rows="10"></textarea>
+            </div>
+            <input class="btn btn-success p-2 m-3" type='submit' value='Submit'>
+        </form>
+    </div>
+
+
+</body>
+</html>
